@@ -3,12 +3,25 @@
 <head>
   <title>RubyKsiazki</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<header id="calosc" class="navbar navbar-fixed-top ">
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Home",   root_path %></li>
+        <li><%= link_to "Pomoc", pomoc_path %></li>
+        <li><%= link_to "rejestracja", zaloguj_path %></li>
+        <li><%= link_to "zaloguj", login_path %></li>
+      </ul>
+    </nav>
+</header>
+<div id="calosc">
+  <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %>"><%= message %></div>
+  <% end %>
+  <%= yield %>
+</div>
 </body>
 </html>

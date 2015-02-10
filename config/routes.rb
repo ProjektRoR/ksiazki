@@ -1,17 +1,18 @@
 RubyKsiazki::Application.routes.draw do
-  resources :opinions
 
+  get    'login'   => 'sessions#new'
+  post   'login'   => 'sessions#create'
+# delete 'logout'  => 'sessions#destroy'
+# get "users/new"
 
-  resources :publishing_houses
+  resources :users
+  root to: "static_pages#index"
 
-
-  resources :books
-
-
-  get "users/new"
-
-  resources :parkings
-
+ # get "static_pages/index"
+  match '/pomoc', to: 'static_pages#help'
+  match '/zaloguj', to: 'users#new'
+  match '/logout', to: 'sessions#destroy'
+  #get "static_pages/help"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
