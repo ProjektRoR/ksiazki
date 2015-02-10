@@ -1,0 +1,56 @@
+<div id="Panel_user">
+    <div id="dane_uzrytkownika">
+      <div id="dane">
+        <div class="panel panel-default">
+          <div class="panel-heading">Witaj użytkowniku</div>
+          <div class="panel-body">
+            <h2><%= @user.name %></h2>
+            e-mail:<br/>
+            <h2><%= @user.email %></h2>
+          </div>
+      </div>
+     </div>
+
+      <div id="q">
+        <%= link_to "edytuj dane", edit_user_path(current_user) %><br/>
+        zmień hasło<br/>
+        dodaj kisążke<br/>
+      </div>
+
+    </div>
+  <div style="clear: both;">  </div>
+
+  <div id="vv">
+    <div class="panel panel-default">
+      <div class="panel-heading">Ostatnio dodane książki:</div>
+      <div class="panel-body">
+        <% if @user.type_like != nil %>
+            cokolweik
+        <% else %>
+            niestety użytkowni nie wprowadził żadnych książek
+        <%end%>
+      </div>
+    </div>
+    <div id="vv">
+    <div class="panel panel-default">
+      <div class="panel-heading">Ostatnio dodane książki:</div>
+      <div class="panel-body">
+
+      </div>
+    </div>
+      </div>
+    <% if logged_in? %>
+        # zalogowany uzytkownik
+        <%= link_to "Log out", logout_path, method: "delete" %>
+    <% else %>
+        <%= link_to "Log in", login_path %>
+        # nie zalogowany uzytkownik
+    <% end %>
+  </div>
+
+
+
+
+</div>
+
+

@@ -62,3 +62,17 @@ textarea {
   text-align: center;
   color: #ffffff;
 }
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
+#vv {
+  margin-top: 20px;
+  width: 400px;
+}

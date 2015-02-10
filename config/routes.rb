@@ -10,8 +10,9 @@ RubyKsiazki::Application.routes.draw do
 
  # get "static_pages/index"
   match '/pomoc', to: 'static_pages#help'
-  match '/zaloguj', to: 'users#new'
+  match '/rejestruj', to: 'users#new'
   match '/logout', to: 'sessions#destroy'
+  #match '/edytuj', to: 'users#edit'
   #get "static_pages/help"
 
   # The priority is based upon order of creation:
