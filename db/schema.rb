@@ -11,41 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141222204512) do
+ActiveRecord::Schema.define(:version => 20150131193028) do
 
-  create_table "books", :force => true do |t|
-    t.integer  "id_book"
-    t.string   "title"
-    t.string   "autor"
-    t.integer  "id_publishing_house"
-    t.string   "image"
-    t.string   "description"
-    t.string   "string"
-    t.datetime "created_at",          :null => false
-    t.datetime "updated_at",          :null => false
-  end
-
-  create_table "opinions", :force => true do |t|
-    t.integer  "id_book"
-    t.integer  "id_user"
-    t.string   "text"
-    t.decimal  "number"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "parkings", :force => true do |t|
-    t.string   "adres"
-    t.integer  "pojemnosc"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "publishing_houses", :force => true do |t|
-    t.integer  "id_book"
-    t.string   "name_publishing"
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "type_like"
+    t.integer  "access"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+    t.string   "password_digest"
   end
 
 end

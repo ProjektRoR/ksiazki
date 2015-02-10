@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-RubyKsiazki::Application.config.secret_token = '6612e7ffbf42196a914c28755b12931c96bd36d45377a25c461a1176eace905be690f96a572ca9de3b9c160e4d3e8ab6a4bb397220a08027881a48d57ba1ae4c'
+RubyKsiazki::Application.config.secret_token = 'b3d484ddb7136d58bb1c398f37212c97a9d0f50ac37f2649e34799a78f12a0724cbb005df78124fb1d65034a8f9336f8933e15faf67a299e4684916aba77904d'
